@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Guarderías</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list [virtualScroll]="kindergartens">
+
+    <button ion-item *virtualItem="let kindergarten">
+      <ion-icon name="beer" item-start></ion-icon>
+      <h2>{{kindergarten.name}}</h2>
+      <ion-note>{{kindergarten.address}}</ion-note>
+      <ion-note>Edades: {{kindergarten.minAge}} - {{kindergarten.maxAge}}</ion-note>
+    </button>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Bares</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list [virtualScroll]="bars">
+
+    <button ion-item *virtualItem="let bar">
+      <ion-icon name="beer" item-start></ion-icon>
+      <h2>{{bar.name}}</h2>
+      <ion-note>{{bar.address}}</ion-note>
+      <ion-note>{{bar.type}}</ion-note>
+    </button>
+  </ion-list>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="goToNewBar()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
