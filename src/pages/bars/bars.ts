@@ -23,8 +23,8 @@ export class BarsPage {
   constructor(private navCtrl: NavController,
               private barsProvider: BarsProvider) { }
 
-  ionViewDidLoad() {
-    this.barsProvider.getBars().subscribe(bars => this.bars = bars)
+  ionViewDidEnter() {
+    this.barsProvider.getBars().subscribe(bars => this.bars = bars);
   }
 
   goToNewBar() {

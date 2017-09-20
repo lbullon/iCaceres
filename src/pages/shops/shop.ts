@@ -1,10 +1,9 @@
 export interface Shop {
   id?: number;
   name: string;
-  goods: string[];
+  goods: string;
   address: string;
-
-  longitude: number;
+  description: string;
   openingTime: number;
   closingTime: number;
 }
